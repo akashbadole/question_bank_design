@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdn.ckeditor.com/ckeditor5/22.0.0/classic/ckeditor.js"></script>
+    <style>
+        .border {
+            -webkit-box-shadow: 9px 10px 5px -8px rgba(0, 0, 0, 0.71);
+            -moz-box-shadow: 9px 10px 5px -8px rgba(0, 0, 0, 0.71);
+            box-shadow: 9px 10px 5px -8px rgba(0, 0, 0, 0.71);
+        }
+
+        label {
+            font-weight: bold;
+        }
+        input{
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container border">
+
+        <div class="row" style="margin-top:20px;">
+            <h4 class="px-3">Header</h4>
+        
+
+            <div class="container mt-2">
+                <div class="row">
+                    <div class="col-md-4">
+                        <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+                            <option selected>Header 1</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="container mt-2">
+                <div class="row">
+                    <div class="col-md-4">
+                        <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+                            <option selected>Header 2</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="container mt-2">
+                <div class="row">
+                    <div class="col-md-4">
+                        <input type="text" name="" value="" placeholder="Input" class='form-control'>
+                    </div>
+                </div>
+            </div>
+              <div class="container mt-2">
+                <div class="row">
+                    <div class="col-md-4">
+                        <button type="button" class="btn btn-success">Add</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-12 mt-2">
+                {!! Form::open(['url' => '/processform', 'class' => 'form-horizontal']) !!}
+
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th scope="col">SrNo </th>
+                            <th scope="col">Header 1</th>
+                            <th scope="col">Header 2</th>
+                            <th scope="col">Header 3</th>
+                            <th scope="col">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                      <!--   @foreach($workoutcategories as $workoutcategory)
+
+                        <th scope="row">{!! Form::text('srno[]', $workoutcategory->srno, ['class' => 'form-control', 'size' => '15']) !!}</th>
+                        <td>{!! Form::text('email[]', $workoutcategory->email, ['class' => 'form-control', 'size' => '15']) !!}</td>
+                        <td>{!! Form::text('fullname[]', $workoutcategory->fullname, ['class' => 'form-control', 'size' => '15']) !!}</td>
+                        <td>{!! Form::text('groupname[]', $workoutcategory->groupname, ['class' => 'form-control', 'size' => '15']) !!}</td>
+                        <td>{!! Form::text('contactnumber[]', $workoutcategory->contactnumber, ['class' => 'form-control', 'size' => '15']) !!}</td>
+                        @foreach($workoutcategories as $workoutcategory)
+                         -->                    
+
+
+
+                        <tr>
+                            <td> 1 </td>
+                            <td>vaibhav@gmail.com</td>
+                            <td>vaibhav@gmail.com</td>
+                            <td>Vaibhav R</td>
+                            <td>
+                                <div class="col-auto">
+                                    <a type="button" class="btn btn-primary" data-toggle="modal" data-target="#edit">
+                                          <i class="fa fa-pencil" aria-hidden="true"
+                                        style="color: #e19526;"></i></a>
+                                    <a type="button" class="btn btn-primary" data-toggle="modal" data-target="#delete">
+                                    <i class="fa fa-times" aria-hidden="true" style="color: red;"></i>
+                                    </a>
+
+                                                    <!-- Edit -->
+                                    <div class="modal fade" id="edit" tabindex="-1" role="dialog" aria-labelledby="editTitle" aria-hidden="true">
+                                      <div class="modal-dialog modal-dialog-centered" role="document">
+                                        <div class="modal-content">
+                                          <div class="modal-header">
+                                            <h5 class="modal-title" id="exampleModalLongTitle">Edit title</h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                              <span aria-hidden="true">&times;</span>
+                                            </button>
+                                          </div>
+                                          <div class="modal-body">
+                                            <!-- add here -->
+
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="container mt-2">
+                                                    <div class="row">
+                                                        <div class="col">
+                                                            <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+                                                                <option selected>Header 1</option>
+                                                                <option value="1">One</option>
+                                                                <option value="2">Two</option>
+                                                                <option value="3">Three</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="container mt-2">
+                                                    <div class="row">
+                                                        <div class="col">
+                                                            <select class="custom-select mr-sm-2" id="inlineFormCustomSelect ">
+                                                                <option selected>Header 2</option>
+                                                                <option value="1">One</option>
+                                                                <option value="2">Two</option>
+                                                                <option value="3">Three</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="container mt-2">
+                                                    <div class="row">
+                                                        <div class="col">
+                                                            <input type="text" name="" value="" placeholder="Input" class='form-control'>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                               <!--    <div class="container mt-2">
+                                                    <div class="row">
+                                                        <div class="col">
+                                                            <button type="button" class="btn btn-success">Edit</button>
+                                                        </div>
+                                                    </div>
+                                                </div> -->
+                                                </div>
+
+                                                <div class="col-md-6">
+                                                    <fieldset disabled>
+                                                    <div class="container mt-2">
+                                                    <div class="row">
+                                                        <div class="col">
+                                                            <input type="text" name="" value="" placeholder="Header1" disabled>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="container mt-2">
+                                                    <div class="row">
+                                                        <div class="col">
+                                                             <input type="text" name="" value="" placeholder="Header2" disabled>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                
+                                            </div>
+                                              </fieldset>
+
+                                            </div>
+
+                                            <!-- End Herre -->
+                                          </div>
+                                          <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                            <button type="button" class="btn btn-success">Edit</button>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+
+                                <!-- Delete -->
+                                <div class="modal fade" id="delete" tabindex="-1" role="dialog" aria-labelledby="deleteTitle" aria-hidden="true">
+                                  <div class="modal-dialog modal-dialog-centered" role="document">
+                                    <div class="modal-content">
+                                      <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLongTitle">Delete title</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                          <span aria-hidden="true">&times;</span>
+                                        </button>
+                                      </div>
+                                      <div class="modal-body">
+                                        ...
+                                      </div>
+                                      <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                        <button type="button" class="btn btn-primary">Save changes</button>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+
+                                </div>
+
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input checkBoxClass" id="customCheck2">
+                                    <label class="custom-control-label" for="customCheck2"></label>
+                                </div>
+                            </td>
+                            <td>jay@gmail.com</td>
+                            <td>Jay Guru</td>
+                            <td>Jay Guru</td>
+                            <td>
+                                <div class="col-auto"><i class="fa fa-pencil" aria-hidden="true"
+                                        style="color: #e19526;"></i>
+                                    <i class="fa fa-times" aria-hidden="true" style="color: red;"></i></div>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input checkBoxClass" id="customCheck3">
+                                    <label class="custom-control-label" for="customCheck3"></label>
+                                </div>
+                            </td>
+                            <td>rohit@gmail.com</td>
+                            <td>rohit@gmail.com</td>
+                            <td>Rohit Varun</td>
+                            <td>
+                                <div class="col-auto"><i class="fa fa-pencil" aria-hidden="true"
+                                        style="color: #e19526;"></i>
+                                    <i class="fa fa-times" aria-hidden="true" style="color: red;"></i></div>
+                        </tr>
+                    </tbody>
+                </table>
+                {!! Form::close() !!}
+
+
+
+
+
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+
+    <script>
+
+        $(document).ready(function () {
+            $("#customCheckall").click(function () {
+                $(".checkBoxClass").prop('checked', $(this).prop('checked'));
+            });
+        });
+
+    </script>
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

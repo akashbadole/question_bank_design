@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdn.ckeditor.com/ckeditor5/22.0.0/classic/ckeditor.js"></script>
+    <style>
+        .border {
+            -webkit-box-shadow: 9px 10px 5px -8px rgba(0, 0, 0, 0.71);
+            -moz-box-shadow: 9px 10px 5px -8px rgba(0, 0, 0, 0.71);
+            box-shadow: 9px 10px 5px -8px rgba(0, 0, 0, 0.71);
+        }
+
+        #starttime {
+            width: 100%;
+            border-radius: 2px;
+            border: 1px solid #D0D5DB;
+        }
+
+        #endtime {
+            width: 100%;
+            border-radius: 2px;
+            border: 1px solid #D0D5DB;
+        }
+
+        label {
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div class="container mt-4 mb-4 ">
+        <h4>Add New Test</h4>
+        <div class="row ">
+
+            <div class="col-md-12 col-lg-12 border">
+                <form>
+                    <div class="form-group">
+                        <label for="quiz-name">Quiz Name</label>
+                        <input type="text" class="form-control" id="quiz" placeholder="Quiz Name">
+                    </div>
+                    <div class="form-group">
+                        <label for="description">Description</label>
+
+                        <div class="centered">
+                            <div id="editor">
+
+                                Practice Best Questions, for Free!
+                                Practice thousands of questions created by experts & toppers, review answers with
+                                detailed solutions, track your progress with performance analysis, and master all your
+                                subjects at no cost.
+                                <figure class="image image-style-side"><img
+                                        src="https://www.stoodnt.com/blog/wp-content/uploads/2020/01/exam-1575366183.jpg"
+                                        alt="Three Monks walking on ancient temple.">
+                                    <figcaption>Leaving your comfort zone might lead you to such beautiful sceneries
+                                        like this one.</figcaption>
+                                </figure>
+
+                            </div>
+
+                        </div>
+                        <div class="form-group mt-2">
+                            <label for="startdate">Start Date (Quiz can be attempted after this date. YYYY-MM-DD
+                                HH:ll:SS)</label>
+                            <input type="datetime-local" id="starttime" name="starttime">
+                        </div>
+                        <div class="form-group mt-2">
+                            <label for="enddate">End Date (Quiz can be attempted before this date. e.g 2020-07-22
+                                23:57:26)</label>
+                            <input type="datetime-local" id="endtime" name="endtime">
+                        </div>
+                        <div class="form-group">
+                            <label for="duration">Duration (in min.)</label>
+                            <input type="number" class="form-control" id="" name="duration" placeholder="10">
+                        </div>
+                        <div class="form-group">
+                            <label for="maximumattempt">Allow Maximum Attempt</label>
+                            <input type="number" class="form-control" id="" name="maximumattempt" placeholder="10">
+                        </div>
+                        <div class="form-group">
+                            <label for="minpercentage">Minimum Percentage Required to Pass</label>
+                            <input type="number" class="form-control" id="" name="minpercentage" placeholder="50">
+                        </div>
+                        <div class="form-group">
+                            <label for="correctscore">Correct Score</label>
+                            <input type="number" class="form-control" id="" name="correctscore" placeholder="10">
+                        </div>
+                        <div class="form-group">
+                            <label for="incorrectscore">Incorrect Score</label>
+                            <input type="number" class="form-control" id="" name="incorrectscore" placeholder="10">
+                        </div>
+                        <div class="form-group">
+                            <label for="maximumattempt">Allow IP Address to attmpt this quiz. To allow all, leave empty.
+                            </label>
+                            <input type="number" class="form-control" id="" name="maximumattempt" placeholder="10">
+                        </div>
+                        <div class="form-group">
+                            <label for="submittingquiz">Allow to view correct answer after submitting quiz. </label><br>
+                            <label class="form-check-label form-check-inline">
+                                <input type="radio" class="form-check-input" value="" checked="checked">Yes
+                            </label>
+                            <label class="form-check-label form-check-inline">
+                                <input type="radio" class="form-check-input" value=""> No
+                            </label>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="submittingquizlogin">Open Quiz - can be attempted without login.</label><br>
+                            <label class="form-check-label form-check-inline">
+                                <input type="radio" class="form-check-input" value="">Yes
+                            </label>
+                            <label class="form-check-label form-check-inline">
+                                <input type="radio" class="form-check-input" value="" checked="checked"> No
+                            </label>
+                        </div>
+                        <div class="form-group">
+                            <label for="selectgroup">Select Group </label><br>
+                            <div class="form-check-inline">
+                                <label class="form-check-label" for="check1">
+                                    <input type="checkbox" class="form-check-input" id="check1" name="vehicle1"
+                                        value="something" checked>16 Batch
+                                </label>
+                            </div>
+                            <div class="form-check-inline">
+                                <label class="form-check-label" for="check2">
+                                    <input type="checkbox" class="form-check-input" id="check2" name="vehicle2"
+                                        value="something">Sawangi Batch
+                                </label>
+                            </div>
+                            <div class="form-check-inline">
+                                <label class="form-check-label">
+                                    <input type="checkbox" class="form-check-input" disabled>Option 3
+                                </label>
+                            </div>
+                            <div class="form-check-inline">
+                                <label class="form-check-label" for="check2">
+                                    <input type="checkbox" class="form-check-input" id="check2" name="vehicle2"
+                                        value="something">Sawangi Batch
+                                </label>
+                            </div>
+                            <div class="form-check-inline">
+                                <label class="form-check-label">
+                                    <input type="checkbox" class="form-check-input" disabled>Option 3
+                                </label>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+
+            </div>
+            <!-- <div class="col-md-4"></div> -->
+        </div>
+    </div>
+    <!-- </div> -->
+
+    <script>
+        ClassicEditor
+            .create(document.querySelector('#editor'))
+            .then(editor => {
+                console.log(editor);
+            })
+            .catch(error => {
+                console.error(error);
+            });
+
+    </script>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" >
+    <script src="https://cdn.ckeditor.com/ckeditor5/22.0.0/classic/ckeditor.js"></script>
+    <style> 
+    .border{
+        -webkit-box-shadow: 9px 10px 5px -8px rgba(0,0,0,0.71);
+        -moz-box-shadow: 9px 10px 5px -8px rgba(0,0,0,0.71);
+        box-shadow: 9px 10px 5px -8px rgba(0,0,0,0.71);
+    }
+    label{
+    font-weight: bold;
+    }
+    </style>
+</head>
+<body>
+            <div class="container mt-4 mb-4 border">
+                <h4>Recently Register User</h4>
+                <div class="row ">
+                                
+                    <!-- @error('quiz')
+                        <div class="alert alert-danger">{{ $message }}</div>
+                    @enderror -->
+                    <div class="col-md-12 col-lg-12 test-border" >
+                        
+                          {!! Form::open(['url' => '/processform', 'class' => 'form-horizontal']) !!}
+                          <!-- {!! Form::model($workoutcategories,['method' => 'POST', 'url' => 'workoutcategories/update']) !!} -->
+                          <form>
+                            <table class="table table-striped">
+                                <thead>
+                                  <tr>
+                                    <th scope="col">Sr.No</th>
+                                    <th scope="col">Email </th>
+                                    <th scope="col">Full Name</th>
+                                    <th scope="col">Group Name</th>
+                                    <th scope="col">Contact Number</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    @foreach($workoutcategories as $workoutcategory)
+
+                                    <th scope="row">{!! Form::text('srno[]', $workoutcategory->srno, ['class' => 'form-control', 'size' => '15']) !!}</th>
+                                    <td>{!! Form::text('email[]', $workoutcategory->email, ['class' => 'form-control', 'size' => '15']) !!}</td>
+                                    <td>{!! Form::text('fullname[]', $workoutcategory->fullname, ['class' => 'form-control', 'size' => '15']) !!}</td>
+                                    <td>{!! Form::text('groupname[]', $workoutcategory->groupname, ['class' => 'form-control', 'size' => '15']) !!}</td>
+                                    <td>{!! Form::text('contactnumber[]', $workoutcategory->contactnumber, ['class' => 'form-control', 'size' => '15']) !!}</td>
+                                    @foreach($workoutcategories as $workoutcategory)
+
+                                  </tr>
+                                  <tr>
+                                    <th scope="row">2</th>
+                                    <td>Jacob</td>
+                                    <td>Thornton</td>
+                                    <td>@fat</td>
+                                    <td>9673232323</td>
+                                  </tr>
+                                  <tr>
+                                    <th scope="row">3</th>
+                                    <td>Larry</td>
+                                    <td>the Bird</td>
+                                    <td>@twitter</td>
+                                    <td>9673232323</td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                        </form>
+                        {!! Form::close() !!}
+
+        
+                    </div>
+                </div>
+            </div>
+ <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+ <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+ <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+ <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+</body>
+</html>

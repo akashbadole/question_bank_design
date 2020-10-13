@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question List</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdn.ckeditor.com/ckeditor5/22.0.0/classic/ckeditor.js"></script>
+    <style>
+        .border {
+            -webkit-box-shadow: 9px 10px 5px -8px rgba(0, 0, 0, 0.71);
+            -moz-box-shadow: 9px 10px 5px -8px rgba(0, 0, 0, 0.71);
+            box-shadow: 9px 10px 5px -8px rgba(0, 0, 0, 0.71);
+        }
+
+        
+        input {
+            width: 100%;
+        }
+
+        .quiztitle {
+            font-size: 25px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container border">
+        <div class="row" style="margin-top:20px;">
+            <div class="col">
+                <div class="custom-control custom-radio">
+                    <div class=""> 
+                    <h3>What approximate value should come in place of question mark ?</h3>
+                        <div>
+                            <h4 class="quiztitle">Option 1)</h4>
+                            <div class="custom-control custom-radio">
+                                <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input">
+                                <label class="custom-control-label" for="customRadio1">Select Correct Option</label>
+                            </div>
+                            <textarea  name="editordata" class='form-control summernote' ></textarea>
+                        </div>
+                        <div>
+                            <h4 class="quiztitle">Option 2)</h4>
+                            <div class="custom-control custom-radio">
+                                <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input">
+                                <label class="custom-control-label" for="customRadio2">Select Correct Option</label>
+                            </div>
+                            <textarea  name="editordata2" class='form-control summernote'></textarea>
+                        </div>
+                        <div>
+                            <h4 class="quiztitle">Option 3)</h4>
+                            <div class="custom-control custom-radio">
+                                <input type="radio" id="customRadio3" name="customRadio" class="custom-control-input">
+                                <label class="custom-control-label" for="customRadio3">Select Correct Option</label>
+                            </div>
+                            <textarea  name="editordata3" class='form-control summernote'></textarea>
+                        </div>
+                        <div>
+                            <h4 class="quiztitle">Option 4)</h4>
+                            <div class="custom-control custom-radio">
+                                <input type="radio" id="customRadio4" name="customRadio" class="custom-control-input">
+                                <label class="custom-control-label" for="customRadio4">Select Correct Option</label>
+                            </div>
+                            <textarea  name="editordata4" class='form-control summernote'></textarea>
+                        </div>
+                         <div class="mt-2">
+                            <button class="btn btn-primary" type="submit">Submit</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+            crossorigin="anonymous"></script>
+
+        <!-- include summernote css/js -->
+        <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>
+        <script type="text/javascript">
+           $(document).ready(function() {
+              $('.summernote').summernote();
+            });
+        </script>
+
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+            integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+            crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+            integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+            crossorigin="anonymous"></script>
+</body>
+
+</html>

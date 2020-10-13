@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Video</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://vjs.zencdn.net/7.8.4/video-js.css" rel="stylesheet" />
+
+      <!-- If you'd like to support IE8 (for Video.js versions prior to v7) -->
+      <script src="https://vjs.zencdn.net/ie8/1.1.2/videojs-ie8.min.js"></script>
+    <style>
+        .border {
+            -webkit-box-shadow: 9px 10px 5px -8px rgba(0, 0, 0, 0.71);
+            -moz-box-shadow: 9px 10px 5px -8px rgba(0, 0, 0, 0.71);
+            box-shadow: 9px 10px 5px -8px rgba(0, 0, 0, 0.71);
+        }
+
+        #starttime {
+            width: 100%;
+            border-radius: 2px;
+            border: 1px solid #D0D5DB;
+        }
+
+        #endtime {
+            width: 100%;
+            border-radius: 2px;
+            border: 1px solid #D0D5DB;
+        }
+
+        label {
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div class="container mt-4 mb-4 ">
+        <h4>Add Video</h4>
+        <div class="row ">
+
+            <div class="col-md-12 col-lg-12 border">
+                <form>
+                        <div class="form-group">
+                            <label for="title">Title</label>
+                            <input type="text" class="form-control" id="titlev" placeholder="Title Name">
+                        </div>
+                        <div class="form-group mt-2">
+                            <label for="startdate">Video Thumbnail</label>
+                            <input type="file" id="videothumbnail" name="" class="form-control">
+                        </div>
+                        
+                         <div class="form-group mt-2">
+                            <label for="startdate">Video File</label>
+                            <input type="file" id="videofile" name="" class="form-control">
+                        </div>
+                        <div class="embed-responsive embed-responsive-16by9">
+                     <!--        <video
+                            id="my-video"
+                            class="video-js"
+                            controls
+                            preload="auto"
+                            width="640"
+                            height="264"
+                            poster="https://i.vimeocdn.com/video/804078155.webp"
+                            data-setup="{'controls': true}"
+                          >
+                            <source src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4" type="video/mp4" res="240" label="240p" />
+                            
+
+
+                            <p class="vjs-no-js">
+                              To view this video please enable JavaScript, and consider upgrading to a
+                              web browser that
+                              <a href="https://videojs.com/html5-video-support/" target="_blank"
+                                >supports HTML5 video</a
+                              > 
+                            </p>
+                          </video> -->
+                         
+                            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/tgbNymZ7vqY?rel=0" allowfullscreen></iframe>
+
+                         </div>
+                         <div class="form-group">
+                            <label for="selectgroup">Select Group </label><br>
+                            <div class="form-check-inline">
+                                <label class="form-check-label" for="check1">
+                                    <input type="checkbox" class="form-check-input" id="check1" name="vehicle1"
+                                        value="something" checked>16 Batch
+                                </label>
+                            </div>
+                            <div class="form-check-inline">
+                                <label class="form-check-label" for="check2">
+                                    <input type="checkbox" class="form-check-input" id="check2" name="vehicle2"
+                                        value="something">Sawangi Batch
+                                </label>
+                            </div>
+                            <div class="form-check-inline">
+                                <label class="form-check-label">
+                                    <input type="checkbox" class="form-check-input" disabled>Option 3
+                                </label>
+                            </div>
+                            <div class="form-check-inline">
+                                <label class="form-check-label" for="check2">
+                                    <input type="checkbox" class="form-check-input" id="check2" name="vehicle2"
+                                        value="something">Sawangi Batch
+                                </label>
+                            </div>
+                            <div class="form-check-inline">
+                                <label class="form-check-label">
+                                    <input type="checkbox" class="form-check-input" disabled>Option 3
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="duration">Video Position</label>
+                            <input type="number" class="form-control" id="" name="duration" placeholder="0">
+                        </div>
+                        <div class="form-group mt-2">
+                            <label for="startdate">Video Visibility Start Date </label>
+                            <input type="datetime-local" id="starttime" name="starttime">
+                        </div>
+                        <div class="form-group mt-2">
+                            <label for="enddate">Video Visibility End Date</label>
+                            <input type="datetime-local" id="endtime" name="endtime">
+                        </div> 
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+
+            </div>
+            <!-- <div class="col-md-4"></div> -->
+        </div>
+    </div>
+    <!-- </div> -->
+
+    
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://vjs.zencdn.net/7.8.4/video.js"></script>
+</body>
+
+</html>

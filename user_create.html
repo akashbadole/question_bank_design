@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add New User</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://vjs.zencdn.net/7.8.4/video-js.css" rel="stylesheet" />
+
+      <!-- If you'd like to support IE8 (for Video.js versions prior to v7) -->
+      <script src="https://vjs.zencdn.net/ie8/1.1.2/videojs-ie8.min.js"></script>
+    <style>
+        .border {
+            -webkit-box-shadow: 9px 10px 5px -8px rgba(0, 0, 0, 0.71);
+            -moz-box-shadow: 9px 10px 5px -8px rgba(0, 0, 0, 0.71);
+            box-shadow: 9px 10px 5px -8px rgba(0, 0, 0, 0.71);
+        }
+
+        #starttime {
+            width: 100%;
+            border-radius: 2px;
+            border: 1px solid #D0D5DB;
+        }
+
+        #endtime {
+            width: 100%;
+            border-radius: 2px;
+            border: 1px solid #D0D5DB;
+        }
+
+        label {
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div class="container mt-4 mb-4 ">
+        <h4>Add New User</h4>
+        <div class="row ">
+
+            <div class="col-md-12 col-lg-12 ">
+                <form>
+                        <div class="form-group">
+                            <input type="email" class="form-control" id="email" placeholder="Email Address">
+                        </div>
+                        <div class="form-group ">
+                            <input type="password" class="form-control" id="Password" placeholder="Password">
+                        </div>
+                        <div class="form-group ">
+                            <input type="text" class="form-control" id="firstname" placeholder="First Name">
+                        </div>
+                        <div class="form-group ">
+                            <input type="text" class="form-control" id="lastname" placeholder="Last Name">
+                        </div>
+                        <div class="form-group ">
+                            <input type="number" class="form-control" id="contactnumber" placeholder="Contact Number">
+                        </div>
+                        <div class="form-group ">
+                            <label for="selectgroup">Select Group</label>
+                             <select class="form-control">
+                              <option>16 Batch (Price: 13000)</option>
+                              <option>46 Batch (Price: 23000)</option>
+                              <option>76 Batch (Price: 63000)</option>
+                              <option>36 Batch (Price: 21000)</option>
+                            </select>
+                        </div>
+                        <div class="form-group ">
+                            <label for="subscription">Subscription Expired</label>
+                            <input type="date" class="form-control" id="subscription" value="2020-11-01" >
+                        </div>
+                        <div class="form-group ">
+                            <label for="selectgroup">User Account</label>
+                             <select class="form-control">
+                              <option>User</option>
+                              <option>Standard</option>
+                              <option>Standard</option>
+                              <option>Standard</option>
+                            </select>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+
+            </div>
+            <!-- <div class="col-md-4"></div> -->
+        </div>
+    </div>
+    <!-- </div> -->
+
+    
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://vjs.zencdn.net/7.8.4/video.js"></script>
+</body>
+
+</html>
